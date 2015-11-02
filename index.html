@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en">   
 
 	<head>
 		<meta charset="utf-8">
@@ -16,6 +16,7 @@
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+		<link rel="stylesheet" href="css/custom.css">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -46,7 +47,7 @@
 						<small>Joe Davis</small>
 					</p>
 					<p>
-						<small>@joethedave | https://github.com/JosephEricDavis</small>
+						<small>@joethedave | https://github.com/JoeTheDave</small>
 					</p>
 				</section>
 
@@ -55,10 +56,15 @@
 				</section>
 
 				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
+					<h2>Assumptions</h2>
+					<p class="fragment">You know JavaScript</p>
+					<p class="fragment">You are alread interested in React</p>
+				</section>
+
+				<section data-background="img/holdOnToYourButts.gif" data-state="hold-butts">
+					<p>We have a lot to cover</p>
+					<p class="fragment">so...</p>
+					<p class="fragment">Hold on to your Butts!</p>
 				</section>
 
 
@@ -74,7 +80,7 @@
 			Reveal.initialize({
 				controls: false, //shows controls in the bottom right corner
 				progress: true, //displays progress bar
-				history: false, //slide changes are logged in browser history
+				history: true, //slide changes are logged in browser history
 				center: true, //Vertical centering of slides
 				touch: true,
 				overview: true,
