@@ -1,4 +1,14 @@
 
+img { 
+	border: none !important;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 1) !important;
+}
+
+.slide-1 img {
+	width: 200px; 
+	height: 200px; 
+	box-shadow: none !important;
+}
 
 html.hold-butts div.slide-background.present {
     background-position: left -50px;
@@ -7,4 +17,19 @@ html.hold-butts div.slide-background.present {
 html.hold-butts p {
     color: #FFFFFF;
     text-shadow: 3px -3px 3px rgba(0, 0, 0, 0.5), 3px 3px 3px rgba(0, 0, 0, 0.5), -3px 3px 3px rgba(0, 0, 0, 0.5), -3px -3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.slide-5 .code {
+	width: 1000px;
+}
+
+.slide-5 .result {
+	position: absolute; 
+	top: 320px; 
+	right: -50px; 
+	width: 500;
+}
+
+.slide-7 .code {
+	
 }
