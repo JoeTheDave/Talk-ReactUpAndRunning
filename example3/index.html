@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.2/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.2/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <script src="Component1.js"></script>
+    <script src="Component2.js"></script>
+    <script src="Component3.js"></script>
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+      ReactDOM.render(
+        <div>
+            <Component1 />
+            <Component2 />
+            <Component3 />
+        </div>
+        ,
+        document.getElementById('app')
+      );
+    </script>
+
+  </body>
+
+</html>
