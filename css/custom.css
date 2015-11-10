@@ -1,14 +1,20 @@
 
+/** Global *******************************************************************/
+
 img { 
 	border: none !important;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 1) !important;
 }
+
+/** Slide 1 *******************************************************************/
 
 .slide-1 img {
 	width: 200px; 
 	height: 200px; 
 	box-shadow: none !important;
 }
+
+/** Slide 4 *******************************************************************/
 
 html.hold-butts div.slide-background.present {
     background-position: left -50px;
@@ -18,6 +24,8 @@ html.hold-butts p {
     color: #FFFFFF;
     text-shadow: 3px -3px 3px rgba(0, 0, 0, 0.5), 3px 3px 3px rgba(0, 0, 0, 0.5), -3px 3px 3px rgba(0, 0, 0, 0.5), -3px -3px 3px rgba(0, 0, 0, 0.5);
 }
+
+/** Slide 5 *******************************************************************/
 
 .slide-5 .code {
 	width: 1000px;
@@ -30,6 +38,35 @@ html.hold-butts p {
 	width: 500;
 }
 
-.slide-7 .code {
-	
+/** Slide 7 *******************************************************************/
+
+.slide-7 .result {
+	position: absolute;
+	top: 400px;
+	left: 400px;
+	color: #FFFFFF;
+}
+
+/** Slide 9 *******************************************************************/
+
+.slide-9 img { position: absolute; }
+.slide-9 .spacer { height: 800px; }
+.slide-9 .gulp { top: 105px; left: 0px; }
+.slide-9 .main { top: 475px; left: 270px; }
+.slide-9 .html { top: 120px; left: 505px; }
+.slide-9 .top { top: 75px; left: -60px; height: 625px; }
+.slide-9 .sub { top: 150px; left: 360px; }
+.slide-9 .result { 
+	position: absolute;
+	background-color: #FFFFFF; 
+	top: 450px; left: 630px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 1)
+}
+
+/** slide-add-res *******************************************************************/
+
+.slide-add-res .jk {
+	position: absolute;
+	top: 341px; left: 162px;
+	box-shadow: none !important;
 }
