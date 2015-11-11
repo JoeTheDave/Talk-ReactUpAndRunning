@@ -133,10 +133,134 @@
 					<!-- Binding Events, how and why -->
 					<!-- Injecting events into child components for flexibility and reuse -->
 
-				<section class="slide-x">
-					<h2>Component Life Cycle Methods</h2>
-					<p>stuff</p>
+				<section class="slide-10">
+					<h3>Component Life Cycle Methods</h3>
+					<ul>
+						<li>render</li>
+						<li>componentWillMount</li>
+						<li>componentDidMount</li>
+						<li>componentWillReceiveProps</li>
+						<li>shouldComponentUpdate</li>
+						<li>componentWillUpdate</li>
+						<li>componentDidUpdate</li>
+						<li>componentWillUnmount</li>
+					</ul>
 				</section>
+
+				<!-- Like .net web forms page events -->
+
+				<section class="slide-11">
+					<div class="title">render</div>
+					<div class="text-content">
+						<p class="fragment">required</p>
+						<p class="fragment">should be kept pure</p>
+					</div>
+					<img class="fragment" src="example5/img/render.png" />
+					<div class="fragment result"><iframe src="example5/index.html"></iframe></div>
+					<div class="spacer"></div>
+				</section>
+
+				<section class="slide-12">
+					<div class="title">componentDidMount</div>
+					<div class="fragment current-visible">
+						<p>Invoked once immediately after the DOM is initially rendered.</p>
+						<p>The DOM representation of the component can be found and acted up via ReactDOM.findDOMNode(component)</p>
+					</div>
+					<div class="spacer"></div>
+					<img class="fragment current-visible html" src="example6/img/html.png" />
+					<img class="fragment app" src="example6/img/applicationComponent.png" />
+					<img class="fragment field" src="example6/img/FormField.png" />
+					<div class="fragment example"><iframe src="example6/index.html"></iframe></div>
+				</section>
+
+				<section class="slide-13">
+					<div class="title">componentWillReceiveProps</div>
+					<div class="fragment current-visible">
+						<p>Invoked when a component has it's props changed, but not the first time during the initial render.</p>
+					</div>
+					<div class="spacer"></div>
+					<img class="fragment app" src="example7/img/applicationComponent.png" />
+					<img class="fragment square" src="example7/img/SquareFader.png" />
+					<div class="fragment example"><iframe src="example7/index.html"></iframe></div>
+				</section>
+
+				<section class="slide-14">
+					<div class="title">componentWillMount</div>
+					<div class="fragment">
+						<p>Invoked onced before DOM is initially rendered.</p>
+						<p>Used for setting initial state.</p>
+					</div>
+					<div class="title fragment">shouldComponentUpdate</div>
+					<div class="fragment">
+						<p>Invoked before rendering when updating, not on intial render.</p>
+						<p>Used to tell react not to update when you know there will be no visual effect.</p>
+						<p>Return false from this method to cancel the update.</p>
+					</div>
+					<div class="title fragment">componentWillUpdate</div>
+					<div class="fragment">
+						<p>Invoked immediately before rendering when new props or state are recevied.  Not on initial rendering.</p>
+						<p>componentWillUpdate(object nextProps, object nextState) { }</p>
+					</div>
+				</section>
+
+				<section class="slide-14">
+					<div class="title">componentDidUpdate</div>
+					<div class="fragment">
+						<p>Invoked immediately after DOM is updated, not on the initial render.</p>
+						<p>componentDidUpdate(object prevProps, object prevState) { }</p>
+						<p>You can operate on the DOM with reactDOM.getDOMNode(this)</p>
+					</div>
+					<div class="title fragment">componentWillUnmount</div>
+					<div class="fragment">
+						<p>Invoked immediately before a component is unmounted from the DOM.</p>
+						<p>Use to clean up any DOM manipulations or Timers created in componentDidMount or componentDidUpdate.</p>
+					</div>
+				</section>
+
+				<section class="slide-15">
+					<h2>Prop Types</h2>
+					<div class="spacer"></div>
+					<img class="fragment prop" src="example8/img/requiredProp.png" />
+					<img class="fragment mask" src="example8/img/missingMask.png" />
+					<img class="fragment fail" src="example8/img/failedPropType.png" />
+				</section>
+
+				<section class="slide-15">
+					<h2>Prop Types</h2>
+					<p>React.PropTypes.array</p>
+					<p>React.PropTypes.bool</p>
+					<p>React.PropTypes.func</p>
+					<p>React.PropTypes.number</p>
+					<p>React.PropTypes.object</p>
+					<p>React.PropTypes.string</p>
+					<p>React.PropTypes.shape({ name: React.PropTypes.string, age: React.PropTypes.number })</p>
+					<p>React.PropTypes.[type].isRequired</p>
+					<p>React.PropTypes.any.isRequired</p>
+					<p><a href="https://facebook.github.io/react/docs/reusable-components.html">https://facebook.github.io/react/docs/reusable-components.html</a></p>
+				</section>
+
+				<section class="slide-15">
+					<h2>Dynamic Children</h2>
+				</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 				<section class="slide-add-res">
 					<h2>Additional Resources</h2>

@@ -6,6 +6,11 @@ img {
 	box-shadow: 0 0 20px rgba(0, 0, 0, 1) !important;
 }
 
+iframe {
+	box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+	background-color: #FFFFFF;
+}
+
 /** Slide 1 *******************************************************************/
 
 .slide-1 img {
@@ -58,9 +63,7 @@ html.hold-butts p {
 .slide-9 .sub { top: 150px; left: 360px; }
 .slide-9 .result { 
 	position: absolute;
-	background-color: #FFFFFF; 
 	top: 450px; left: 630px;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 1)
 }
 
 /** slide-add-res *******************************************************************/
@@ -69,4 +72,134 @@ html.hold-butts p {
 	position: absolute;
 	top: 387px; left: 83px;
 	box-shadow: none !important;
+}
+
+/** slide-11 *******************************************************************/
+
+.slide-11 .title {
+	font-size: 48px;
+}
+
+.slide-11 .text-content {
+	margin: 50px;
+}
+
+.slide-11 p {
+	font-size: 20px;
+}
+
+.slide-11 .result {
+	position: absolute;
+	top: 470px; left: 490px;
+}
+
+.slide-11 .spacer {
+	height: 300px;
+}
+
+/** slide-12 *******************************************************************/
+
+.slide-12 .title {
+	font-size: 48px;
+}
+
+.slide-12 p {
+	font-size: 20px;
+}
+
+.slide-12 .spacer {
+	height: 800px;
+}
+
+.slide-12 .html {
+	position: absolute;
+	top: 75px; left: -75px;
+}
+
+.slide-12 .app {
+	position: absolute;
+	top: 90px; left: -125px;
+}
+
+.slide-12 .field {
+	position: absolute;
+	top: 100px; left: 490px;
+}
+
+.slide-12 .example {
+	position: absolute;
+	top: 460px; left: 260px;
+}
+
+.slide-12 .example iframe {
+	height: 220px;
+	width: 175px;
+}
+
+/** slide-13 *******************************************************************/
+
+.slide-13 .title {
+	font-size: 48px;
+}
+
+.slide-13 p {
+	font-size: 20px;
+}
+
+.slide-13 .spacer {
+	height: 800px;
+}
+
+.slide-13 .app {
+	position: absolute;
+	top: 90px; left: -125px;
+}
+
+.slide-13 .square {
+	position: absolute;
+	top: 100px; left: 490px;
+}
+
+.slide-13 .example {
+	position: absolute;
+	top: 330px; left: 415px;
+}
+
+.slide-13 .example iframe {
+	width: 110px;
+}
+
+/** slide-14 *******************************************************************/
+
+.slide-14 .title {
+	font-size: 48px;
+}
+
+.slide-14 p {
+	font-size: 20px;
+}
+
+/** slide-15 *******************************************************************/
+
+.slide-15 .prop {
+	position: absolute;
+	top: 90px; left: -120px;
+}
+
+.slide-15 .mask {
+	position: absolute;
+	top: 130px; left: 460px;
+}
+
+.slide-15 .fail {
+	position: absolute;
+	top: 470px; left: 150px;
+}
+
+.slide-15 .spacer {
+	height: 800px;
+}
+
+.slide-15 p {
+	font-size: 20px;
 }
