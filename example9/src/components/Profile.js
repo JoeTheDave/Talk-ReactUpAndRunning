@@ -10,7 +10,10 @@ class Profile extends React.Component{
 
     render() {
         return (
-            <button onClick={this.props.handler}>{this.props.text}</button>
+            <div className="profile-component">
+	            <img src={this.props.person.image} />
+	            <div>{this.props.person.name}</div>
+            </div>
         );
     }
 }

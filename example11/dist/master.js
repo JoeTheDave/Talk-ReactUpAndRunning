@@ -19037,13 +19037,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Profile = require('./Profile');
+var _DatePicker = require('./DatePicker');
 
-var _Profile2 = _interopRequireDefault(_Profile);
-
-var _servicesDataService = require('../services/dataService');
-
-var _servicesDataService2 = _interopRequireDefault(_servicesDataService);
+var _DatePicker2 = _interopRequireDefault(_DatePicker);
 
 var ApplicationComponent = (function (_React$Component) {
     _inherits(ApplicationComponent, _React$Component);
@@ -19052,21 +19048,48 @@ var ApplicationComponent = (function (_React$Component) {
         _classCallCheck(this, ApplicationComponent);
 
         _get(Object.getPrototypeOf(ApplicationComponent.prototype), 'constructor', this).call(this, props);
+        this.dateChanged = this.dateChanged.bind(this);
+        this.updateDate = this.updateDate.bind(this);
         this.state = {
-            people: _servicesDataService2['default'].getPeople()
+            selectedDate: '08/22/2015'
         };
     }
 
     _createClass(ApplicationComponent, [{
+        key: 'dateChanged',
+        value: function dateChanged(value) {
+            this.state.selectedDate = value;
+            this.setState(this.state);
+        }
+    }, {
+        key: 'updateDate',
+        value: function updateDate() {
+            this.dateChanged($('#non-controlled').val());
+        }
+    }, {
         key: 'render',
         value: function render() {
             return _react2['default'].createElement(
                 'div',
                 null,
-                this.state.people.map(function (person, index) {
-                    return _react2['default'].createElement(_Profile2['default'], { key: index, person: person });
-                }),
-                _react2['default'].createElement('div', { className: 'clear' })
+                _react2['default'].createElement(
+                    'div',
+                    null,
+                    _react2['default'].createElement('input', { id: 'controlled', type: 'text', value: this.state.selectedDate })
+                ),
+                _react2['default'].createElement('br', null),
+                _react2['default'].createElement(
+                    'div',
+                    null,
+                    _react2['default'].createElement('input', { id: 'non-controlled', type: 'text', defaultValue: this.state.selectedDate }),
+                    _react2['default'].createElement(
+                        'button',
+                        { onClick: this.updateDate },
+                        'Update'
+                    )
+                ),
+                _react2['default'].createElement('br', null),
+                _react2['default'].createElement(_DatePicker2['default'], { changeEvent: this.dateChanged, selectedDate: this.state.selectedDate })
             );
         }
     }]);
@@ -19078,63 +19101,85 @@ exports['default'] = ApplicationComponent;
 module.exports = exports['default'];
 
 
-},{"../services/dataService":162,"./Profile":160,"react":158}],160:[function(require,module,exports){
+},{"./DatePicker":160,"react":158}],160:[function(require,module,exports){
 
-//Profile.js
+//DatePicker.js
 
-"use strict";
+'use strict';
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, '__esModule', {
     value: true
 });
 
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var Profile = (function (_React$Component) {
-    _inherits(Profile, _React$Component);
+var _reactDom = require('react-dom');
 
-    function Profile(props) {
-        _classCallCheck(this, Profile);
+var DatePicker = (function (_React$Component) {
+    _inherits(DatePicker, _React$Component);
 
-        _get(Object.getPrototypeOf(Profile.prototype), "constructor", this).call(this, props);
+    function DatePicker(props) {
+        _classCallCheck(this, DatePicker);
+
+        _get(Object.getPrototypeOf(DatePicker.prototype), 'constructor', this).call(this, props);
+        this.datePickerValueChanged = this.datePickerValueChanged.bind(this);
     }
 
-    _createClass(Profile, [{
-        key: "render",
+    _createClass(DatePicker, [{
+        key: 'setDateProperty',
+        value: function setDateProperty() {
+            $((0, _reactDom.findDOMNode)(this)).context.value = this.props.selectedDate;
+        }
+    }, {
+        key: 'datePickerValueChanged',
+        value: function datePickerValueChanged() {
+            this.props.changeEvent($((0, _reactDom.findDOMNode)(this)).context.value);
+        }
+    }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            $((0, _reactDom.findDOMNode)(this)).kendoDatePicker({
+                format: "MM/dd/yyyy"
+            }).change(this.datePickerValueChanged);
+            this.setDateProperty();
+        }
+    }, {
+        key: 'componentDidUpdate',
+        value: function componentDidUpdate() {
+            this.setDateProperty();
+        }
+    }, {
+        key: 'render',
         value: function render() {
-            return _react2["default"].createElement(
-                "div",
-                { className: "profile-component" },
-                _react2["default"].createElement("img", { src: this.props.person.image }),
-                _react2["default"].createElement(
-                    "div",
-                    null,
-                    this.props.person.name
-                )
-            );
+            return _react2['default'].createElement('input', null);
         }
     }]);
 
-    return Profile;
-})(_react2["default"].Component);
+    return DatePicker;
+})(_react2['default'].Component);
 
-exports["default"] = Profile;
-module.exports = exports["default"];
+DatePicker.propTypes = {
+    selectedDate: _react2['default'].PropTypes.string.isRequired,
+    changeEvent: _react2['default'].PropTypes.func.isRequired
+};
+
+exports['default'] = DatePicker;
+module.exports = exports['default'];
 
 
-},{"react":158}],161:[function(require,module,exports){
+},{"react":158,"react-dom":2}],161:[function(require,module,exports){
 
 //main.js
 
@@ -19155,30 +19200,4 @@ var _componentsApplicationComponent2 = _interopRequireDefault(_componentsApplica
 (0, _reactDom.render)(_react2['default'].createElement(_componentsApplicationComponent2['default'], null), document.getElementById('app'));
 
 
-},{"./components/ApplicationComponent":159,"react":158,"react-dom":2}],162:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-	value: true
-});
-exports['default'] = {
-	getPeople: function getPeople() {
-		return [{
-			name: 'Donald Trump',
-			image: 'http://static6.businessinsider.com/image/55918b77ecad04a3465a0a63/nbc-fires-donald-trump-after-he-calls-mexicans-rapists-and-drug-runners.jpg'
-		}, {
-			name: 'Barack Obama',
-			image: 'http://commentphotos.com/gallery/CommentPhotos.com_1406551688.jpg'
-		}, {
-			name: 'George Bush',
-			image: 'http://funnystack.com/wp-content/uploads/2014/04/Funny-George-Bush-301.jpg'
-		}, {
-			name: 'Hillary Clinton',
-			image: 'http://www.funnyfacepics.com/wp-content/uploads/2013/07/hillary-clinton-funny-face.jpg'
-		}];
-	}
-};
-module.exports = exports['default'];
-
-
-},{}]},{},[161]);
+},{"./components/ApplicationComponent":159,"react":158,"react-dom":2}]},{},[161]);

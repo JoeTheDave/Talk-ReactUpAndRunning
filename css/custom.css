@@ -203,3 +203,96 @@ html.hold-butts p {
 .slide-15 p {
 	font-size: 20px;
 }
+
+/** slide-16 *******************************************************************/
+
+.slide-16 .spacer {
+	height: 800px;
+}
+
+.slide-16 .profile {
+	position: absolute;
+	top: 155px; left: -150px;
+}
+
+.slide-16 .service {
+	position: absolute;
+	top: 105px; left: 260px;
+}
+
+.slide-16 .app {
+	position: absolute;
+	top: 90px; left: 500px;
+}
+
+.slide-16 .example {
+	position: absolute;
+	top: 200px; left: 50px;
+}
+
+.slide-16 iframe {
+	width: 845px;
+	height: 225px;
+}
+
+/** slide-17 *******************************************************************/
+
+.slide-17 .spacer {
+	height: 800px;
+}
+
+.slide-17 .app {
+	position: absolute;
+	top: 90px; left: -150px;
+}
+
+.slide-17 .modal {
+	position: absolute;
+	top: 105px; left: 575px;
+}
+
+.slide-17 .example {
+	position: absolute;
+	top: 200px; left: 350px;
+}
+
+.slide-17 iframe {
+	width: 400px;
+	height: 300px;
+}
+
+/** slide-18 *******************************************************************/
+
+.slide-18 .spacer {
+	height: 800px;
+}
+
+.slide-18 .html {
+	position: absolute;
+	top: 190px; left: 180px;
+}
+
+.slide-18 .app {
+	position: absolute;
+	top: 90px; left: 395px;
+}
+
+.slide-18 .picker {
+	position: absolute;
+	top: 60px; left: -170px;
+}
+
+.slide-18 .err {
+	position: absolute;
+	top: 415px; left: 630px;
+}
+
+.slide-18 .example {
+	position: absolute;
+	top: 360px; left: 85px;
+}
+
+.slide-18 iframe {
+	width: 300px;
+	height: 350px;
+}

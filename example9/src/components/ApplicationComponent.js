@@ -5,10 +5,12 @@ import React from 'react';
 import Profile from './Profile';
 import dataService from '../services/dataService';
 
-class ApplicationComponent extends React.Component{
+class ApplicationComponent extends React.Component {
     constructor(props) {
         super(props);
-        this.state.people = dataService.getPeople();
+        this.state = {
+            people: dataService.getPeople()
+        };
     }
 
     render() {

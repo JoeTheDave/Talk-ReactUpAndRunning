@@ -19037,13 +19037,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Profile = require('./Profile');
+var _Modal = require('./Modal');
 
-var _Profile2 = _interopRequireDefault(_Profile);
-
-var _servicesDataService = require('../services/dataService');
-
-var _servicesDataService2 = _interopRequireDefault(_servicesDataService);
+var _Modal2 = _interopRequireDefault(_Modal);
 
 var ApplicationComponent = (function (_React$Component) {
     _inherits(ApplicationComponent, _React$Component);
@@ -19052,21 +19048,34 @@ var ApplicationComponent = (function (_React$Component) {
         _classCallCheck(this, ApplicationComponent);
 
         _get(Object.getPrototypeOf(ApplicationComponent.prototype), 'constructor', this).call(this, props);
+        this.openModal = this.openModal.bind(this);
         this.state = {
-            people: _servicesDataService2['default'].getPeople()
+            showModal: false
         };
     }
 
     _createClass(ApplicationComponent, [{
+        key: 'openModal',
+        value: function openModal() {
+            this.state.showModal = !this.state.showModal;
+            this.setState(this.state);
+        }
+    }, {
         key: 'render',
         value: function render() {
             return _react2['default'].createElement(
                 'div',
                 null,
-                this.state.people.map(function (person, index) {
-                    return _react2['default'].createElement(_Profile2['default'], { key: index, person: person });
-                }),
-                _react2['default'].createElement('div', { className: 'clear' })
+                _react2['default'].createElement(
+                    'button',
+                    { onClick: this.openModal },
+                    'Toggle Modal'
+                ),
+                _react2['default'].createElement(
+                    _Modal2['default'],
+                    { isOpen: this.state.showModal },
+                    _react2['default'].createElement('img', { src: 'img/chuckNorris.gif' })
+                )
             );
         }
     }]);
@@ -19078,9 +19087,9 @@ exports['default'] = ApplicationComponent;
 module.exports = exports['default'];
 
 
-},{"../services/dataService":162,"./Profile":160,"react":158}],160:[function(require,module,exports){
+},{"./Modal":160,"react":158}],160:[function(require,module,exports){
 
-//Profile.js
+//Modal.js
 
 "use strict";
 
@@ -19102,35 +19111,43 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var Profile = (function (_React$Component) {
-    _inherits(Profile, _React$Component);
+var Modal = (function (_React$Component) {
+    _inherits(Modal, _React$Component);
 
-    function Profile(props) {
-        _classCallCheck(this, Profile);
+    function Modal(props) {
+        _classCallCheck(this, Modal);
 
-        _get(Object.getPrototypeOf(Profile.prototype), "constructor", this).call(this, props);
+        _get(Object.getPrototypeOf(Modal.prototype), "constructor", this).call(this, props);
     }
 
-    _createClass(Profile, [{
+    _createClass(Modal, [{
         key: "render",
         value: function render() {
-            return _react2["default"].createElement(
-                "div",
-                { className: "profile-component" },
-                _react2["default"].createElement("img", { src: this.props.person.image }),
-                _react2["default"].createElement(
+            if (this.props.isOpen) {
+                return _react2["default"].createElement(
                     "div",
-                    null,
-                    this.props.person.name
-                )
-            );
+                    { className: "modal-component" },
+                    _react2["default"].createElement(
+                        "div",
+                        { className: "header" },
+                        "Header"
+                    ),
+                    _react2["default"].createElement(
+                        "div",
+                        { className: "content" },
+                        this.props.children
+                    )
+                );
+            } else {
+                return null;
+            }
         }
     }]);
 
-    return Profile;
+    return Modal;
 })(_react2["default"].Component);
 
-exports["default"] = Profile;
+exports["default"] = Modal;
 module.exports = exports["default"];
 
 
@@ -19155,30 +19172,4 @@ var _componentsApplicationComponent2 = _interopRequireDefault(_componentsApplica
 (0, _reactDom.render)(_react2['default'].createElement(_componentsApplicationComponent2['default'], null), document.getElementById('app'));
 
 
-},{"./components/ApplicationComponent":159,"react":158,"react-dom":2}],162:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-	value: true
-});
-exports['default'] = {
-	getPeople: function getPeople() {
-		return [{
-			name: 'Donald Trump',
-			image: 'http://static6.businessinsider.com/image/55918b77ecad04a3465a0a63/nbc-fires-donald-trump-after-he-calls-mexicans-rapists-and-drug-runners.jpg'
-		}, {
-			name: 'Barack Obama',
-			image: 'http://commentphotos.com/gallery/CommentPhotos.com_1406551688.jpg'
-		}, {
-			name: 'George Bush',
-			image: 'http://funnystack.com/wp-content/uploads/2014/04/Funny-George-Bush-301.jpg'
-		}, {
-			name: 'Hillary Clinton',
-			image: 'http://www.funnyfacepics.com/wp-content/uploads/2013/07/hillary-clinton-funny-face.jpg'
-		}];
-	}
-};
-module.exports = exports['default'];
-
-
-},{}]},{},[161]);
+},{"./components/ApplicationComponent":159,"react":158,"react-dom":2}]},{},[161]);
