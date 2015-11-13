@@ -22,7 +22,7 @@ class ApplicationComponent extends React.Component {
         return (
             <div>
                 <button onClick={this.openModal}>Toggle Modal</button>
-                <Modal isOpen={this.state.showModal}>
+                <Modal isOpen={this.state.showModal} title={"Chuck Norris"}>
                     <img src="img/chuckNorris.gif" />
                 </Modal>
             </div>

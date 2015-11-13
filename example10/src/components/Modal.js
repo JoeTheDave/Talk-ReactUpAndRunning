@@ -12,7 +12,7 @@ class Modal extends React.Component{
         if (this.props.isOpen) {
             return (
                 <div className="modal-component">
-                    <div className="header">Header</div>
+                    <div className="header">{this.props.title}</div>
                     <div className="content">{this.props.children}</div>
                 </div>
             );
