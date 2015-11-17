@@ -75,14 +75,6 @@ html.hold-butts p {
 	top: 450px; left: 630px;
 }
 
-/** slide-add-res *******************************************************************/
-
-.slide-add-res .jk {
-	position: absolute;
-	top: 387px; left: 83px;
-	box-shadow: none !important;
-}
-
 /** slide-11 *******************************************************************/
 
 .slide-11 .title {
@@ -350,4 +342,12 @@ html.hold-butts p {
 
 .slide-21 .spacer {
 	height: 800px;
+}
+
+/** slide-add-res *******************************************************************/
+
+.slide-add-res .jk {
+	position: absolute;
+	top: 341px; left: 83px;
+	box-shadow: none !important;
 }

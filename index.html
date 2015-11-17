@@ -49,6 +49,7 @@
 					<p>
 						<small><a href="https://twitter.com/joethedave">@joethedave</a> | <a href="https://github.com/JoeTheDave">https://github.com/JoeTheDave</a></small>
 					</p>
+					<p><small><a href="http://talk-reactupandrunning.apphb.com">http://talk-reactupandrunning.apphb.com</a></small></p>
 				</section>
 
 				<section class="slide-2">
@@ -57,14 +58,14 @@
 
 				<section class="slide-3">
 					<h2>Assumptions</h2>
-					<p class="fragment">You know JavaScript</p>
-					<p class="fragment">You are already interested in React</p>
+					<p>You know JavaScript</p>
+					<p>You are already interested in React</p>
 				</section>
 
-				<section class="slide-4" data-background="img/holdOnToYourButts.gif" data-state="hold-butts">
+				<!-- <section class="slide-4" data-background="img/holdOnToYourButts.gif" data-state="hold-butts">
 					<div></div>
 					<p class="fragment">Hold on to your Butts!</p>
-				</section>
+				</section> -->
 
 				<section class="slide-5">
 					<h2>Basic Example</h2>
@@ -73,14 +74,11 @@
 					<img class="fragment result" src="example1/example-1-result.png" />
 				</section>
 
-				<!--Most simplistic example-->
-				<!--Time to pray to the Demo Gods...-->
-
 				<section class="slide-6">
 					<h2>JSX Transformation</h2>
 					<img src="example2/example-2-code.png" />
-					<img class="fragment" src="example2/example-2-result.png" />
-					<p class="fragment"><a href="https://babeljs.io/repl/">https://babeljs.io/repl/</a></p>
+					<img src="example2/example-2-result.png" />
+					<p><a href="https://babeljs.io/repl/">https://babeljs.io/repl/</a></p>
 				</section>
 
 				<section class="slide-7">
@@ -92,59 +90,46 @@
 				<section class="slide-8">
 					<h2>Starter Kit</h2>
 					<ol>
-						<li class="fragment">Install Node.js</li>
-						<li class="fragment">Install Git</li>
-						<li class="fragment">Fire up your favorite command line utility</li>
-						<li class="fragment">Navigate to your project directory</li>
-						<li class="fragment">git clone https://github.com/coryhouse/vin-javascript-starter-kit.git</li>
-						<li class="fragment">npm install</li>
-						<li class="fragment">gulp</li>
+						<li>Compiles ES6</li>
+						<li>Transforms JSX</li>
+						<li>Bundles all JS into a single file</li>
+						<li>Performs JS linting</li>
+						<li>Runs unit tests</li>
+						<li>Analyzes code coverage</li>
+						<li>Compiles Sass to CSS</li>
+						<li>Provides React boilerplate to give you a place to start</li>
 					</ol>
+					<img class="fragment" src="img/killer_computer.gif" />
 				</section>
 
 				<section class="slide-8">
 					<h2>Starter Kit</h2>
 					<ol>
-						<li class="fragment">Compiles ES6</li>
-						<li class="fragment">Transforms JSX</li>
-						<li class="fragment">Bundles all JS into a single file</li>
-						<li class="fragment">Performs JS linting</li>
-						<li class="fragment">Runs unit tests</li>
-						<li class="fragment">Analyzes code coverage</li>
-						<li class="fragment">Compiles Sass to CSS</li>
-						<li class="fragment">Provides React boilerplate to give you a place to start</li>
+						<li><a href="https://nodejs.org/en/">Install Node.js</a></li>
+						<li><a href="https://git-scm.com/downloads">Install Git</a></li>
+						<li>Fire up your favorite command line utility</li>
+						<li>Navigate to your project directory</li>
+						<li>git clone https://github.com/coryhouse/vin-javascript-starter-kit.git</li>
+						<li>npm install</li>
+						<li>gulp</li>
 					</ol>
-					<img class="fragment" src="img/killer_computer.gif" />
 				</section>
-
-				<!-- Think of the starter kit like a VS project template... feel free to rip out the tools and utilities that don't suit your project -->
 
 				<section class="slide-9">
 					<h3>Bootstrapping</h3>
 					<div class="spacer"></div>
-					<img class="fragment gulp" src="example4/img/gulpfile.png" />
-					<img class="fragment html" src="example4/img/html.png" />
-					<img class="fragment main" src="example4/img/main.png" />
+					<img class="gulp" src="example4/img/gulpfile.png" />
+					<img class="html" src="example4/img/html.png" />
+					<img class="main" src="example4/img/main.png" />
 				</section>
-
-				<!-- A build process will normall do a lot more than this... like... -->
 
 				<section class="slide-9">
 					<h3>React Components</h3>
 					<div class="spacer"></div>
-					<img class="fragment top" src="example4/img/topLevelComponent.png" />
-					<img class="fragment sub" src="example4/img/SubComponent.png" />
+					<img class="top" src="example4/img/topLevelComponent.png" />
+					<img class="sub" src="example4/img/SubComponent.png" />
 					<div class="fragment result"><iframe src="example4/index.html"></iframe></div>
 				</section>
-
-				<!-- Anatomy of a component - it's an ES6 class, this is why... -->
-				<!-- Props vs State -->
-					<!-- When to use and when not to - why (declarative, definitive) -->
-					<!-- How to access each -->
-				<!-- JSX Syntax {} -->
-				<!-- Events -->
-					<!-- Binding Events, how and why -->
-					<!-- Injecting events into child components for flexibility and reuse -->
 
 				<section class="slide-10">
 					<h3>Component Life Cycle Methods</h3>
@@ -160,35 +145,35 @@
 					</ul>
 				</section>
 
-				<!-- Like .net web forms page events -->
-
 				<section class="slide-11">
 					<div class="title">render</div>
 					<div class="text-content">
-						<p class="fragment">required</p>
-						<p class="fragment">should be kept pure</p>
+						<p>required</p>
+						<p>should be kept pure</p>
 					</div>
-					<img class="fragment" src="example5/img/render.png" />
-					<div class="fragment result"><iframe src="example5/index.html"></iframe></div>
+					<img src="example5/img/render.png" />
+					<div class="result"><iframe src="example5/index.html"></iframe></div>
 					<div class="spacer"></div>
 				</section>
 
 				<section class="slide-12">
 					<div class="title">componentDidMount</div>
-					<div class="fragment current-visible">
+					<div>
 						<p>Invoked once immediately after the DOM is initially rendered.</p>
 						<p>The DOM representation of the component can be found and acted up via ReactDOM.findDOMNode(component)</p>
 					</div>
 					<div class="spacer"></div>
-					<img class="fragment current-visible html" src="example6/img/html.png" />
-					<img class="fragment app" src="example6/img/applicationComponent.png" />
-					<img class="fragment field" src="example6/img/FormField.png" />
+					<img class="fragment html" src="example6/img/html.png" />
+					<div class="fragment">
+						<img class="app" src="example6/img/applicationComponent.png" />
+						<img class="field" src="example6/img/FormField.png" />
+					</div>
 					<div class="fragment example"><iframe src="example6/index.html"></iframe></div>
 				</section>
 
 				<section class="slide-13">
 					<div class="title">componentWillReceiveProps</div>
-					<div class="fragment current-visible">
+					<div>
 						<p>Invoked when a component has it's props changed, but not the first time during the initial render.</p>
 					</div>
 					<div class="spacer"></div>
@@ -199,18 +184,18 @@
 
 				<section class="slide-14">
 					<div class="title">componentWillMount</div>
-					<div class="fragment">
+					<div>
 						<p>Invoked onced before DOM is initially rendered.</p>
 						<p>Used for setting initial state.</p>
 					</div>
-					<div class="title fragment">shouldComponentUpdate</div>
-					<div class="fragment">
+					<div class="title">shouldComponentUpdate</div>
+					<div>
 						<p>Invoked before rendering when updating, not on intial render.</p>
 						<p>Used to tell react not to update when you know there will be no visual effect.</p>
 						<p>Return false from this method to cancel the update.</p>
 					</div>
-					<div class="title fragment">componentWillUpdate</div>
-					<div class="fragment">
+					<div class="title">componentWillUpdate</div>
+					<div>
 						<p>Invoked immediately before rendering when new props or state are recevied.  Not on initial rendering.</p>
 						<p>componentWillUpdate(object nextProps, object nextState) { }</p>
 					</div>
@@ -218,13 +203,13 @@
 
 				<section class="slide-14">
 					<div class="title">componentDidUpdate</div>
-					<div class="fragment">
+					<div>
 						<p>Invoked immediately after DOM is updated, not on the initial render.</p>
 						<p>componentDidUpdate(object prevProps, object prevState) { }</p>
 						<p>You can operate on the DOM with reactDOM.getDOMNode(this)</p>
 					</div>
-					<div class="title fragment">componentWillUnmount</div>
-					<div class="fragment">
+					<div class="title">componentWillUnmount</div>
+					<div>
 						<p>Invoked immediately before a component is unmounted from the DOM.</p>
 						<p>Use to clean up any DOM manipulations or Timers created in componentDidMount or componentDidUpdate.</p>
 					</div>
@@ -233,8 +218,8 @@
 				<section class="slide-15">
 					<h2>Prop Types</h2>
 					<div class="spacer"></div>
-					<img class="fragment prop" src="example8/img/requiredProp.png" />
-					<img class="fragment mask" src="example8/img/missingMask.png" />
+					<img class="prop" src="example8/img/requiredProp.png" />
+					<img class="mask" src="example8/img/missingMask.png" />
 					<img class="fragment fail" src="example8/img/failedPropType.png" />
 				</section>
 
@@ -255,17 +240,19 @@
 				<section class="slide-16">
 					<h2>Dynamic Children</h2>
 					<div class="spacer"></div>
-					<img class="fragment service" src="example9/img/dataService.png" />
-					<img class="fragment profile" src="example9/img/profile.png" />
-					<img class="fragment app" src="example9/img/applicationComponent.png" />
+					<img class="service" src="example9/img/dataService.png" />
+					<div class="fragment">
+						<img class="profile" src="example9/img/profile.png" />
+						<img class="app" src="example9/img/applicationComponent.png" />
+					</div>
 					<div class="fragment example"><iframe src="example9/index.html"></iframe></div>
 				</section>
 
 				<section class="slide-17">
 					<h2>Nested Components</h2>
 					<div class="spacer"></div>
-					<img class="fragment app" src="example10/img/applicationComponent.png" />
-					<img class="fragment modal" src="example10/img/modal.png" />
+					<img class="app" src="example10/img/applicationComponent.png" />
+					<img class="modal" src="example10/img/modal.png" />
 					<div class="fragment example"><iframe src="example10/index.html"></iframe></div>
 				</section>
 
@@ -284,21 +271,20 @@
 				<section class="slide-19">
 					<h2>Inline Styles</h2>
 					<div class="spacer"></div>
-					<img class="fragment broke" src="example12/img/app.png" />
-					<img class="fragment err" src="example12/img/styleError.png" />
-					<img class="fragment fixed" src="example12/img/workingCode.png" />
-					<div class="fragment example"><iframe src="example12/index.html"></iframe></div>
+					<img class="broke" src="example12/img/app.png" />
+					<img class="err" src="example12/img/styleError.png" />
+					<img class="fixed" src="example12/img/workingCode.png" />
+					<div class="example"><iframe src="example12/index.html"></iframe></div>
 				</section>
 
 				<section class="slide-20">
 					<h2>Flux</h2>
-					<div class="spacer"></div>
+					<div class="fragment">To be continued...</div>
 				</section>
 
 				<section class="slide-add-res">
 					<h2>Additional Resources</h2>
 					<ul>
-						<li class="fragment"><a href="http://talk-reactupandrunning.apphb.com">http://talk-reactupandrunning.apphb.com/</a></li>
 						<li class="fragment"><a href="https://facebook.github.io/react/docs/getting-started.html">https://facebook.github.io/react/docs/getting-started.html</a></li>
 						<li class="fragment">
 							Pluralsight Courses
